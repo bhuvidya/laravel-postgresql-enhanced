@@ -15,7 +15,7 @@ class BuilderPartialIndex
 {
     public function upsertPartialIndex(): Closure
     {
-        return function (array $values, array|string $uniqueBy, ?array $update = null, string $partialIndexWhereClause = null): mixed {
+        return function (array $values, array|string $uniqueBy, ?array $update = null, string $partialIndexWhereClause = null): int {
             /* @var \Illuminate\Database\Eloquent\Builder $this */
 
             if (empty($partialIndexWhereClause)) {

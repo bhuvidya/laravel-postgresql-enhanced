@@ -21,8 +21,9 @@ trait BuilderPartialIndex
     public function upsertPartialIndex(array $values, array|string $uniqueBy, ?array $update = null, string $partialIndexWhereClause = null): int
     {
         if (empty($values)) {
-            return collect();
-        } elseif (empty($partialIndexWhereClause)) {
+            return 0;
+        }
+        if (empty($partialIndexWhereClause)) {
             return $this->upsert($values, $uniqueBy, $update);
         }
 
