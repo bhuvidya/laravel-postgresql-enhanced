@@ -19,6 +19,7 @@ class Grammar extends PostgresGrammar
     use GrammarFullText;
     use GrammarOrder;
     use GrammarReturning;
+    use GrammarPartialIndex;
     use GrammarWhere;
 
     /**
